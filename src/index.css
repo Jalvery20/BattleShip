@@ -1,13 +1,35 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.text-shadow{
+  text-shadow: 1px 1px 5px black;
+}
+
+.cos-shadow{
+  box-shadow: 2px 2px 5px black;
+}
+.bigLogo{
+  width: 50em;
+}
+.smallLogo{
+  width: 25em;
+}
+@media only screen and (max-width: 600px) {
+  .bigLogo{
+    width: 25em;
+  }
+  .smallLogo{
+    width: 20em;
+  }
+  .NameInput{
+    width:80%;
+  }
 }

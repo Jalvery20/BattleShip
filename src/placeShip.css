@@ -1,0 +1,287 @@
+
+
+.img img{
+    cursor: grab;
+}
+
+
+.gridCont{
+	display: flex;
+	justify-content: center;
+	left: 0;
+	right: 0;
+}
+
+.boardGrid{
+    display: grid;
+	position: relative;
+	margin: 0 auto;
+	grid-template: repeat(10, 3rem) / repeat(10, 3rem);
+	text-align: center;
+	gap: 2px;
+}
+.cell{
+    border: 1px solid white;
+	height: 100%;
+	width: 100%;
+	transition: 0.3s;
+}
+.battleCell:hover{
+		background:green;
+}
+.upBoard{
+    position: absolute;
+    display: grid;
+	margin: 0 auto;
+	grid-template: repeat(10, 3rem) / repeat(10, 3rem);
+	gap: 2px;
+}
+.upCell{
+    border: 1px solid rgb(236, 1, 1);
+	height: 100%;
+	width: 100%;
+	transition: 0.3s;
+}
+ 
+.carrier{
+    box-sizing: content-box;
+    overflow-anchor:none;
+}
+.carrier img{
+    width: 250px;
+}
+.float-shadow{
+	display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+
+.float-shadow::before{
+	display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.float-shadow:hover, .float-shadow:focus, .float-shadow:active {
+	box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  }
+  @-webkit-keyframes hvr-buzz-out {
+	10% {
+	  -webkit-transform: translateX(3px) rotate(2deg);
+	  transform: translateX(3px) rotate(2deg);
+	}
+	20% {
+	  -webkit-transform: translateX(-3px) rotate(-2deg);
+	  transform: translateX(-3px) rotate(-2deg);
+	}
+	30% {
+	  -webkit-transform: translateX(3px) rotate(2deg);
+	  transform: translateX(3px) rotate(2deg);
+	}
+	40% {
+	  -webkit-transform: translateX(-3px) rotate(-2deg);
+	  transform: translateX(-3px) rotate(-2deg);
+	}
+	50% {
+	  -webkit-transform: translateX(2px) rotate(1deg);
+	  transform: translateX(2px) rotate(1deg);
+	}
+	60% {
+	  -webkit-transform: translateX(-2px) rotate(-1deg);
+	  transform: translateX(-2px) rotate(-1deg);
+	}
+	70% {
+	  -webkit-transform: translateX(2px) rotate(1deg);
+	  transform: translateX(2px) rotate(1deg);
+	}
+	80% {
+	  -webkit-transform: translateX(-2px) rotate(-1deg);
+	  transform: translateX(-2px) rotate(-1deg);
+	}
+	90% {
+	  -webkit-transform: translateX(1px) rotate(0);
+	  transform: translateX(1px) rotate(0);
+	}
+	100% {
+	  -webkit-transform: translateX(-1px) rotate(0);
+	  transform: translateX(-1px) rotate(0);
+	}
+  }
+  @keyframes buzz-out {
+	10% {
+	  -webkit-transform: translateX(3px) rotate(2deg);
+	  transform: translateX(3px) rotate(2deg);
+	}
+	20% {
+	  -webkit-transform: translateX(-3px) rotate(-2deg);
+	  transform: translateX(-3px) rotate(-2deg);
+	}
+	30% {
+	  -webkit-transform: translateX(3px) rotate(2deg);
+	  transform: translateX(3px) rotate(2deg);
+	}
+	40% {
+	  -webkit-transform: translateX(-3px) rotate(-2deg);
+	  transform: translateX(-3px) rotate(-2deg);
+	}
+	50% {
+	  -webkit-transform: translateX(2px) rotate(1deg);
+	  transform: translateX(2px) rotate(1deg);
+	}
+	60% {
+	  -webkit-transform: translateX(-2px) rotate(-1deg);
+	  transform: translateX(-2px) rotate(-1deg);
+	}
+	70% {
+	  -webkit-transform: translateX(2px) rotate(1deg);
+	  transform: translateX(2px) rotate(1deg);
+	}
+	80% {
+	  -webkit-transform: translateX(-2px) rotate(-1deg);
+	  transform: translateX(-2px) rotate(-1deg);
+	}
+	90% {
+	  -webkit-transform: translateX(1px) rotate(0);
+	  transform: translateX(1px) rotate(0);
+	}
+	100% {
+	  -webkit-transform: translateX(-1px) rotate(0);
+	  transform: translateX(-1px) rotate(0);
+	}
+  }
+  .buzz-out {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-animation-name: buzz-out;
+	animation-name: buzz-out;
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+  }
+  @-webkit-keyframes wobble-skew {
+	16.65% {
+	  -webkit-transform: skew(-12deg);
+	  transform: skew(-12deg);
+	}
+	33.3% {
+	  -webkit-transform: skew(10deg);
+	  transform: skew(10deg);
+	}
+	49.95% {
+	  -webkit-transform: skew(-6deg);
+	  transform: skew(-6deg);
+	}
+	66.6% {
+	  -webkit-transform: skew(4deg);
+	  transform: skew(4deg);
+	}
+	83.25% {
+	  -webkit-transform: skew(-2deg);
+	  transform: skew(-2deg);
+	}
+	100% {
+	  -webkit-transform: skew(0);
+	  transform: skew(0);
+	}
+  }
+  @keyframes wobble-skew {
+	16.65% {
+	  -webkit-transform: skew(-12deg);
+	  transform: skew(-12deg);
+	}
+	33.3% {
+	  -webkit-transform: skew(10deg);
+	  transform: skew(10deg);
+	}
+	49.95% {
+	  -webkit-transform: skew(-6deg);
+	  transform: skew(-6deg);
+	}
+	66.6% {
+	  -webkit-transform: skew(4deg);
+	  transform: skew(4deg);
+	}
+	83.25% {
+	  -webkit-transform: skew(-2deg);
+	  transform: skew(-2deg);
+	}
+	100% {
+	  -webkit-transform: skew(0);
+	  transform: skew(0);
+	}
+  }
+  .wobble-skew {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-animation-name:wobble-skew;
+  animation-name: wobble-skew;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  }
+  .msg{
+	  border:5px solid white;
+	  border-radius: 15px;
+	  background-color: black;
+	  padding: 5px;
+  }
+
+@media(max-width:1300px){
+	.statisc{
+		padding: 10px;
+		position: fixed;
+		top:0;
+		left:0;
+		background-color: rgba(0, 0, 0, .9);
+		border:1px solid red;
+		border-radius: 35px;
+	}
+}
+@media(max-width:600px){
+	.boardGrid{
+		display: grid;
+		position: relative;
+		margin: 0 auto;
+		grid-template: repeat(10, 2rem) / repeat(10, 2rem);
+		text-align: center;
+		gap: 2px;
+		font-size: 4px;
+	}	
+	.shipImg{
+		width:70%;
+	}
+	.bg-dark{
+		width: 400px;
+		margin: auto;
+	}
+	.cell{
+		font-size: 8px;
+	}
+}
