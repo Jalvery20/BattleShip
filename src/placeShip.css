@@ -281,7 +281,7 @@
 		width: 400px;
 		margin: auto;
 	}
-	.cell{
-		font-size: 8px;
+	.cell  h6{
+		font-size: 12px;
 	}
 }
