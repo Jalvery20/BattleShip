@@ -295,7 +295,7 @@ useEffect(()=>{
                  <div className="col-lg-4  text-warning">
                      <h3 className="text-center mt-5">Status</h3>
                      <h4 className="text-center">Turn: <span className="text-white">{turn}</span></h4>
-                     <div className="text-center"><button onClick={()=>setHideStatus(!hideStatus)} className="col-4 mb-3 cos-shadow btn btn-outline-warning">{hideStatus ? "Show" :"Hide"} Game status</button></div>
+                     <div className="text-center"><button onClick={()=>setHideStatus(!hideStatus)} className="col-4 mb-3 cos-shadow btn btn-outline-warning">{!hideStatus ? "Show" :"Hide"} Game status</button></div>
                      <div style={{display:`${hideStatus ? "none":"flex"}`,marginLeft:"35px"}} className="statisc row">
                          <div className="col-6">
                              <h3 className="text-success text-center">{player} <img style={{width:`1em`}} className="cos-shadow" src={unitedKingdom} alt="a allied flag"/></h3>
